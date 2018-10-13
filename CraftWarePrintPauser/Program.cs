@@ -41,7 +41,7 @@ namespace CraftWarePrintPauser
                     count++;
                     if(count>layersBeforePause)
                     {
-                        count = 0;
+                        count = 1;
                         for (int p = 0; p < pauseSeconds; p++)
                         {
                             gCode.Add("M117 Layer " + (layer - 1) + " Done (" + (pauseSeconds - p) + ") ; Display Pause Message");
