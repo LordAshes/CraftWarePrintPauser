@@ -2,6 +2,8 @@
 
 Inserts a pause for X seconds after every Y layers allowing print to be stopped and continued.
 
+Purpose:
+
 When the printer pauses after printing every Y layers, the print can be stopped and the layer height recorded.
 Afterwards my SessionSlicer application (https://github.com/LordAshes/SessionSlicer) can be used to split the
 orignal gCode file into two sessions using the recorded height. This allows the print to be continued at a later
@@ -12,6 +14,14 @@ display, there is no guarantee that the printer has finished printing the curren
 determine at what point in the original gCode the next session should resume.
 
 As a bonus, the printer display indicate the layer that it is printing.
+
+Usage:
+
+CraftWarePrintPauser file.gCode layersBeforePause pauseTime
+
+e.g. CraftWarePrintPauser model.gCode 10 5
+
+Compatibility:
 
 This application is compatible with any gCode files which identify the next layer using:
 
